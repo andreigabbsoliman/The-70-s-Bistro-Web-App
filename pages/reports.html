@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | The 70's Bistro Admin</title>
+    <link rel="icon" type="image/png" href="../assets/images/tab%20image/logo%20no%20bg.png">
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem("bistro70s_theme") === "light" ? "light" : "dark"; } catch (e) { document.documentElement.dataset.theme = "dark"; }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/reports.css">
+</head>
+<body data-page="reports" data-title="Reports">
+    <main id="page">
+        <div class="page-head">
+            <div>
+                <p class="eyebrow">Reports</p>
+                <h2>Reports</h2>
+                <p id="rangeLabel">Ticket sales and events.</p>
+            </div>
+            <div class="head-actions no-print">
+                <button class="btn btn-ghost" id="printBtn">Print Report</button>
+                <button class="btn btn-primary" id="exportBtn">Export Report</button>
+            </div>
+        </div>
+
+        <div class="toolbar no-print">
+            <div class="chips" id="presetChips">
+                <button class="chip" data-days="1">Today</button>
+                <button class="chip" data-days="7">Last 7 days</button>
+                <button class="chip active" data-days="30">Last 30 days</button>
+            </div>
+            <span class="spacer"></span>
+            <label class="range-field">From <input type="date" id="fromDate"></label>
+            <label class="range-field">To <input type="date" id="toDate"></label>
+        </div>
+
+        <div class="tabs no-print" id="reportTabs">
+            <button class="tab active" data-tab="sales">Ticket Sales</button>
+            <button class="tab" data-tab="events">Events</button>
+        </div>
+
+        <section class="stat-grid" id="reportCards"></section>
+        <section class="chart-row" id="reportCharts"></section>
+        <div class="card">
+            <div class="card-head"><h3 id="tableTitle">Report</h3></div>
+            <div id="reportTable"></div>
+        </div>
+    </main>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/charts.js"></script>
+    <script src="../assets/js/reports.js"></script>
+</body>
+</html>

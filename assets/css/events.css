@@ -1,0 +1,134 @@
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: transform .2s;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+}
+
+.event-card.cancelled,
+.event-card.completed {
+    opacity: .75;
+}
+
+.event-media {
+    position: relative;
+    height: 170px;
+    background: linear-gradient(135deg, var(--purple), var(--brown-dark));
+    display: grid;
+    place-items: center;
+    font-size: 48px;
+}
+
+.event-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(.8);
+}
+
+.event-media .badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    backdrop-filter: blur(6px);
+    background-color: var(--chip-bg);
+}
+
+.event-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+}
+
+.event-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--orange-light);
+    text-transform: uppercase;
+}
+
+.event-body h3 {
+    font-size: 22px;
+}
+
+.event-artist {
+    color: var(--gold-light);
+}
+
+.event-desc {
+    flex: 1;
+    color: var(--cream-dark);
+    font-size: 13px;
+}
+
+.event-tickets {
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: var(--panel-2);
+    font-size: 12px;
+    color: var(--cream-dark);
+}
+
+.event-tickets p {
+    margin-top: 6px;
+}
+
+.fill-bar {
+    height: 6px;
+    border-radius: 6px;
+    background: var(--line-light);
+    overflow: hidden;
+}
+
+.fill-bar i {
+    display: block;
+    height: 100%;
+    background: var(--orange);
+}
+
+.fill-bar.full i {
+    background: var(--red-light);
+}
+
+.event-tickets b {
+    color: var(--danger-text);
+}
+
+.event-tickets strong {
+    color: var(--cream);
+}
+
+.event-body .row-actions {
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.event-view-img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+:root[data-theme="light"] .event-media .badge {
+    background: var(--chip-bg);
+}

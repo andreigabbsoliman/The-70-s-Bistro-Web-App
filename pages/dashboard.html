@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | The 70's Bistro Admin</title>
+    <link rel="icon" type="image/png" href="../assets/images/tab%20image/logo%20no%20bg.png">
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem("bistro70s_theme") === "light" ? "light" : "dark"; } catch (e) { document.documentElement.dataset.theme = "dark"; }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body data-page="dashboard" data-title="Dashboard">
+    <main id="page">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">Administrator</p>
+                <h2 id="welcomeTitle">Good evening</h2>
+                <p class="muted">Here's what's happening at The 70's Bistro today.</p>
+            </div>
+            <div class="quick-actions">
+                <a class="btn btn-primary" href="transactions.html?new=1">+ Sell Tickets</a>
+                <a class="btn btn-ghost" href="events.html?new=1">+ Add Event</a>
+            </div>
+        </section>
+
+        <section class="stat-grid" id="statGrid"></section>
+
+        <section class="dash-grid">
+            <div class="card span-2">
+                <div class="card-head"><h3>Upcoming Shows</h3><a href="events.html">Manage events →</a></div>
+                <div id="upcomingShows"></div>
+            </div>
+
+            <div class="card" id="salesCard">
+                <div class="card-head"><h3>Ticket Sales</h3><span class="muted">Last 7 days</span></div>
+                <div class="sales-summary" id="salesSummary"></div>
+                <div id="salesChart"></div>
+            </div>
+
+            <div class="card span-2">
+                <div class="card-head"><h3>Recent Ticket Transactions</h3><a href="transactions.html">View all →</a></div>
+                <div id="recentTickets"></div>
+            </div>
+
+            <div class="card" id="notifCard">
+                <div class="card-head"><h3>Recent Notifications</h3><a href="notifications.html">View all →</a></div>
+                <ul class="notif-list" id="recentNotifications"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/charts.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

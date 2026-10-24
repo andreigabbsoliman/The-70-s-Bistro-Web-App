@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | The 70's Bistro Admin</title>
+    <link rel="icon" type="image/png" href="../assets/images/tab%20image/logo%20no%20bg.png">
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem("bistro70s_theme") === "light" ? "light" : "dark"; } catch (e) { document.documentElement.dataset.theme = "dark"; }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+</head>
+<body data-page="gallery" data-title="Gallery">
+    <main id="page">
+        <div class="page-head">
+            <div>
+                <p class="eyebrow">Management</p>
+                <h2>Gallery</h2>
+                <p id="photoCount">Manage the photos shown on the website gallery.</p>
+            </div>
+            <button class="btn btn-primary" id="addImageBtn">+ Add Image</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </main>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+#txnTable .data-table {
+    min-width: 1240px;
+}
+
+#txnTable td[data-label="Date"],
+#txnTable td[data-label="Event"],
+#txnTable td[data-label="Payment Method"] {
+    white-space: nowrap;
+}
+
+#txnTable td[data-label="Actions"] {
+    min-width: 200px;
+}
+
+.ticket-code {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+}
+
+.buyer small {
+    color: var(--grey);
+    display: block;
+}
+
+.toolbar select {
+    max-width: 200px;
+}
+
+.sell-total {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: var(--panel-2);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--serif);
+    font-size: 20px;
+}
+
+.ticket {
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 24px 22px;
+    background: #F4ECDA;
+    color: #1b1612;
+    font-family: var(--mono);
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+}
+
+.ticket h4 {
+    font-family: var(--serif);
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.ticket .center {
+    text-align: center;
+    color: #5b5146;
+}
+
+.ticket hr {
+    border: 0;
+    border-top: 1px dashed #8d8372;
+    margin: 12px 0;
+}
+
+.ticket .line {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 2px 0;
+}
+
+.ticket .grand {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.ticket .band {
+    margin: 6px 0 2px;
+    font-family: var(--serif);
+    font-size: 24px;
+    text-align: center;
+    color: #93461F;
+}
+
+.ticket .code {
+    margin: 10px 0;
+    padding: 8px;
+    border: 2px dashed #1b1612;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.ticket .stamp {
+    margin: 12px auto 0;
+    width: fit-content;
+    padding: 4px 14px;
+    border: 2px solid currentColor;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transform: rotate(-4deg);
+}
+
+.ticket .stamp.paid {
+    color: #2f6b3a;
+}
+
+.ticket .stamp.refunded,
+.ticket .stamp.failed {
+    color: #9E3D32;
+}
+
+.ticket .stamp.pending {
+    color: #93711e;
+}
+
+@media print {
+    body.print-ticket .app {
+        display: none !important;
+    }
+
+    body.print-ticket .modal-overlay {
+        position: static;
+        background: none;
+        padding: 0;
+        opacity: 1;
+    }
+
+    body.print-ticket .modal {
+        box-shadow: none;
+        border: 0;
+        max-height: none;
+        background: #fff !important;
+    }
+
+    body.print-ticket .ticket {
+        box-shadow: none;
+    }
+}

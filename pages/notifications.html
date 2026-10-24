@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | The 70's Bistro Admin</title>
+    <link rel="icon" type="image/png" href="../assets/images/tab%20image/logo%20no%20bg.png">
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem("bistro70s_theme") === "light" ? "light" : "dark"; } catch (e) { document.documentElement.dataset.theme = "dark"; }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/notifications.css">
+</head>
+<body data-page="notifications" data-title="Notifications">
+    <main id="page">
+        <div class="page-head">
+            <div>
+                <p class="eyebrow">System</p>
+                <h2>Notifications</h2>
+                <p id="unreadSummary">Stay on top of ticket sales and event updates.</p>
+            </div>
+            <button class="btn btn-ghost" id="markAllBtn">Mark all as read</button>
+        </div>
+
+        <div class="toolbar">
+            <div class="tabs notif-tabs" id="readTabs">
+                <button class="tab active" data-read="">All</button>
+                <button class="tab" data-read="unread">Unread</button>
+                <button class="tab" data-read="read">Read</button>
+            </div>
+            <span class="spacer"></span>
+            <select id="typeFilter" aria-label="Filter by type">
+                <option value="">All types</option>
+                <option value="ticket">Tickets</option>
+                <option value="system">System</option>
+            </select>
+        </div>
+
+        <ul class="notif-feed" id="notifFeed"></ul>
+    </main>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/notifications.js"></script>
+</body>
+</html>

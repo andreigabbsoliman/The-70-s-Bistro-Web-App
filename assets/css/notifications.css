@@ -1,0 +1,82 @@
+.notif-tabs {
+    margin: 0;
+    border-bottom: 0;
+}
+
+.notif-feed {
+    display: grid;
+    gap: 10px;
+}
+
+.notif-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color .2s;
+}
+
+.notif-item:hover {
+    border-color: var(--line-light);
+}
+
+.notif-item.unread {
+    border-left: 4px solid var(--orange);
+    background: linear-gradient(90deg, rgba(196, 99, 47, .09), var(--panel) 40%);
+}
+
+.notif-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex: none;
+    border-radius: 50%;
+    font-size: 19px;
+    background: var(--panel-2);
+}
+
+.notif-icon.ticket {
+    background: rgba(196, 99, 47, .25);
+}
+
+.notif-icon.system {
+    background: rgba(128, 102, 129, .3);
+}
+
+.notif-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.notif-text strong {
+    display: block;
+    font-size: 15px;
+}
+
+.notif-text p {
+    color: var(--cream-dark);
+}
+
+.notif-text small {
+    color: var(--grey);
+    font-size: 12px;
+}
+
+.notif-item .row-actions {
+    flex: none;
+}
+
+@media (max-width: 600px) {
+    .notif-item {
+        flex-wrap: wrap;
+    }
+
+    .notif-item .row-actions {
+        width: 100%;
+        padding-left: 58px;
+    }
+}
