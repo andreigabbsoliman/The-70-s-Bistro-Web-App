@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | The 70's Bistro Admin</title>
+    <link rel="icon" type="image/png" href="assets/images/tab%20image/logo%20no%20bg.png">
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem("bistro70s_theme") === "light" ? "light" : "dark"; } catch (e) { document.documentElement.dataset.theme = "dark"; }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body class="login-body">
+    <button class="icon-btn theme-toggle theme-float" id="themeToggle" type="button"><span class="i-sun">&#9728;</span><span class="i-moon">&#9790;</span></button>
+    <main class="login-wrap">
+        <section class="login-art">
+            <img src="assets/images/logo/logo.png" alt="The 70's Bistro logo" class="login-logo">
+        </section>
+
+        <section class="login-panel">
+            <form id="loginForm" novalidate>
+                <p class="eyebrow">Internal access</p>
+                <h2>Welcome back</h2>
+                <p class="muted">Sign in to manage ticket sales, events, the menu and more.</p>
+
+                <div class="login-error" id="loginError" role="alert" hidden></div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" autocomplete="username" placeholder="you@70sbistro.com">
+                    <span class="field-error" id="emailError"></span>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-wrap">
+                        <input type="password" id="password" autocomplete="current-password" placeholder="Enter your password">
+                        <button type="button" id="togglePassword" class="toggle-pass" aria-label="Show password">Show</button>
+                    </div>
+                    <span class="field-error" id="passwordError"></span>
+                </div>
+
+                <div class="login-row">
+                    <a href="#" id="forgotLink">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary login-btn" id="loginBtn">
+                    <span class="btn-label">Log In</span><span class="spinner" hidden></span>
+                </button>
+
+                <div class="demo-box">
+                    <p class="eyebrow">Demo account (click to fill)</p>
+                    <button type="button" class="demo-account" data-email="admin@70sbistro.com" data-password="admin123"><strong>Admin</strong> admin@70sbistro.com / admin123</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
