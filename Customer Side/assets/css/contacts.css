@@ -1,0 +1,132 @@
+.touch {
+    display: grid;
+    grid-template-columns: minmax(300px, 42%) 1fr;
+    gap: 7vw;
+    align-items: stretch;
+}
+
+.touch-list {
+    border-top: 1px solid var(--line-light);
+}
+
+.touch-item {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 14px;
+    align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    transition: padding-left .3s ease;
+}
+
+.touch-item:hover {
+    padding-left: 12px;
+}
+
+.touch-item .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--orange);
+}
+
+.touch-item .label {
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--grey);
+}
+
+.touch-item address,
+.touch-item a.value,
+.touch-item .value {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2vw, 27px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    transition: color .3s;
+}
+
+.touch-item a.value:hover {
+    color: var(--orange-light);
+}
+
+.copy-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--line-light);
+    background: transparent;
+    color: var(--cream-soft);
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: 2px;
+    transition: .3s ease;
+}
+
+.copy-btn:hover,
+.copy-btn.done {
+    border-color: var(--orange);
+    background: var(--orange);
+    color: var(--black);
+}
+
+.touch-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 34px;
+}
+
+.touch-socials .footer-socials {
+    margin: 0;
+}
+
+.touch-socials .footer-socials + .footer-socials {
+    margin-left: 0;
+}
+
+.touch-socials .mono-label {
+    margin-right: 10px;
+}
+
+.touch-map {
+    position: relative;
+    min-height: 520px;
+    border: 2px solid var(--orange);
+    border-radius: 28px;
+    box-shadow: 22px 22px 0 var(--green);
+    background: var(--green-dark);
+}
+
+.touch-map iframe {
+    position: absolute;
+    inset: 12px;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    border: 1px solid var(--line-light);
+    border-radius: 18px;
+    filter: grayscale(.55) invert(.92) contrast(.9) hue-rotate(160deg);
+    transition: filter .5s ease;
+}
+
+.touch-map:hover iframe {
+    filter: none;
+}
+
+@media (max-width: 900px) {
+    .touch {
+        grid-template-columns: 1fr;
+    }
+
+    .touch-map {
+        min-height: 400px;
+        margin-right: 22px;
+    }
+}
+
+.contacts-page footer {
+    background: #5C2B12;
+}
